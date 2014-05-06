@@ -29,7 +29,8 @@
         "debug": "~0.7.4",
         "jade": "~1.3.0",
         "stylus": "~0.44.0",
-        "nib":""
+        "nib":"",
+        "logfmt":""
     },
     "engines": {
         "node": "0.11.x"
