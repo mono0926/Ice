@@ -1,0 +1,29 @@
+{
+  "name": "node-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mono0926/Ice"
+  },
+  "keywords": [
+    "ice"
+  ],
+  "author": "Masayuki Ono, Nozomi Fujimoto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mono0926/Ice/issues"
+  },
+  "homepage": "https://github.com/mono0926/Ice",
+  "dependencies": {
+    "express": "^4.1.1",
+    "logfmt": "^1.1.2"
+  },
+  "engines": {
+    "node": "0.11.x"
+  }
+}
