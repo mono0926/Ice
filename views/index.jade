@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Comming soon...
-  img(src="images/mate.png")
+    h1= title
+    p Comming soon...
+    img(src="images/mate.png")
+
+    ul#ices
+    - for (i = 0; i < 10; i++)
+        li: a(href="ices/#{i}") アイス#{i}

@@ -9,6 +9,7 @@ const
     bodyParser = require('body-parser'),
     routes = require('./routes/index'),
     users = require('./routes/users'),
+    ices = require('./routes/ices'),
     app = express();
 
 // view engine setup
@@ -25,6 +26,7 @@ app.use(require('stylus').middleware({ src: path.join(__dirname, 'public') }));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/ices', ices);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
