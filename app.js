@@ -1,5 +1,7 @@
 const
     express = require("express"),
+    stylus = require('stylus'),
+    nib = require('nib'),
     logfmt = require("logfmt"),
     fs = require("fs"),
     path = require('path'),
@@ -11,6 +13,12 @@ const
     users = require('./routes/users'),
     app = express();
 
+function compile(str, path) {
+    return stylus(str)
+        .set('filename', path)
+        .use(nib())
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -21,6 +29,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('stylus').middleware({ src: path.join(__dirname, 'public'), compile:compile }));
 
 app.use('/', routes);
 app.use('/users', users);
