@@ -3,3 +3,4 @@
 /// <reference path="redis/redis.d.ts" />
 /// <reference path="underscore/underscore.d.ts" />
 /// <reference path="winston/winston.d.ts" />
+/// <reference path="body-parser/body-parser.d.ts" />

@@ -1,11 +1,25 @@
 /// <reference path="../typings/tsd.d.ts" />
-
+import app = require('../app');
 import express = require('express');
-var _router = new express.Router();
-_router.get('/:id', (req, res) => {
+
+export module Config {
+    export var router = new express.Router();
+}
+
+var router = Config.router;
+
+router.get('/:id', (req, res) => {
+    console.log("hoge");
     res.send('ices' + req.params.id);
 });
 
-export module Config {
-    export var router = _router;
-}
+router.get('/new', (req, res) => {
+
+});
+
+router.post("", (req, res) => {
+    var body = req.body;
+    var task = body.task;
+    console.log(task);
+    res.send('ices' + req.params.id);
+});
