@@ -3,6 +3,10 @@ import express = require('express');
 import fs = require("fs");
 import path = require('path');
 import redis = require('redis');
+
+
+var indexPath = path.join(__dirname, 'routes/index');
+console.log(indexPath);
 import index = require('routes/index');
 import users = require('routes/users');
 import ices = require('routes/ices');
@@ -10,9 +14,6 @@ import ices = require('routes/ices');
 //import bodyParser = require('body-parser');
 //import session = require('express-session');
 //import RedisStore = require('connect-redis')(session);
-
-
-
 var _app = express();
 //        var redisClient = redis.createClient(6379, 'localhost');
 

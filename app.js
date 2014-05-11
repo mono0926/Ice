@@ -3,6 +3,8 @@ var express = require('express');
 
 var path = require('path');
 
+var indexPath = path.join(__dirname, 'routes/index');
+console.log(indexPath);
 var index = require('routes/index');
 var users = require('routes/users');
 var ices = require('routes/ices');
