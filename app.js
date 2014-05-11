@@ -5,9 +5,9 @@ var path = require('path');
 
 var indexPath = path.join(__dirname, 'routes/index');
 console.log(indexPath);
-var index = require('routes/index');
-var users = require('routes/users');
-var ices = require('routes/ices');
+var index = require('./routes/index');
+var users = require('./routes/users');
+var ices = require('./routes/ices');
 
 //import cookieParser = require('cookie-parser');
 //import bodyParser = require('body-parser');

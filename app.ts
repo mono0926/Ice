@@ -7,9 +7,9 @@ import redis = require('redis');
 
 var indexPath = path.join(__dirname, 'routes/index');
 console.log(indexPath);
-import index = require('routes/index');
-import users = require('routes/users');
-import ices = require('routes/ices');
+import index = require('./routes/index');
+import users = require('./routes/users');
+import ices = require('./routes/ices');
 //import cookieParser = require('cookie-parser');
 //import bodyParser = require('body-parser');
 //import session = require('express-session');
