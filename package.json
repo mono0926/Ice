@@ -33,7 +33,8 @@
         "logfmt":"",
         "redis": "",
         "connect-redis": "",
-        "express-session": ""
+        "express-session": "",
+        "underscore": ""
     },
     "engines": {
         "node": "0.11.x"

@@ -13,6 +13,9 @@
     },
     "redis/redis.d.ts": {
       "commit": "f5f173b867298a039223e5c7637f802b46c28685"
+    },
+    "underscore/underscore.d.ts": {
+      "commit": "f5f173b867298a039223e5c7637f802b46c28685"
     }
   }
 }
