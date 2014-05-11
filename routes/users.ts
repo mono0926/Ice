@@ -1,10 +1,11 @@
 /// <reference path="../typings/tsd.d.ts" />
-var express = require('express'),
-    router = express.Router();
 
-/* GET users listing. */
-router.get('/', (req, res) => {
+import express = require('express');
+var _router = new express.Router();
+_router.get('/', (req, res) => {
     res.send('respond with a resource');
 });
 
-module.exports = router;
+export module Config {
+    export var router = _router;
+}

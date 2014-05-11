@@ -3,16 +3,16 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/routes/users.js" />
-        <item url="file://$PROJECT_DIR$/app2.js" />
+        <item url="file://$PROJECT_DIR$/app.js" />
         <item url="file://$PROJECT_DIR$/routes/index.js" />
-        <item url="file://$PROJECT_DIR$/bin/www2.js" />
         <item url="file://$PROJECT_DIR$/routes/ices.js" />
+        <item url="file://$PROJECT_DIR$/bin/www2.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/routes/users.js" />
       <root url="file://$PROJECT_DIR$/routes/index.js" />
-      <root url="file://$PROJECT_DIR$/app2.js" />
+      <root url="file://$PROJECT_DIR$/app.js" />
       <root url="file://$PROJECT_DIR$/bin/www2.js" />
       <root url="file://$PROJECT_DIR$/routes/ices.js" />
     </CLASSES>

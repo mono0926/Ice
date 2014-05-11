@@ -927,6 +927,8 @@ declare module "express" {
 
             use(route: string, server: Application): Application;
 
+            use(route: string, router: Router) : Application;
+
             use(callback: Function): Application;
 
             use(server: Application): Application;

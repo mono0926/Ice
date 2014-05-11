@@ -1,10 +1,15 @@
 /// <reference path="../typings/tsd.d.ts" />
-var express = require('express'), router = express.Router();
+var express = require('express');
+var _ = require('underscore');
+var _router = new express.Router();
 
 /* GET home page. */
-router.get('/', function (req, res) {
+_router.get('/', function (req, res) {
     res.render('index', { title: 'ice.me' });
 });
 
-module.exports = router;
+(function (Config) {
+    Config.router = _router;
+})(exports.Config || (exports.Config = {}));
+var Config = exports.Config;
 //# sourceMappingURL=index.js.map

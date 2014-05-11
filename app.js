@@ -1,51 +1,63 @@
-const
-    express = require("express"),
-    logfmt = require("logfmt"),
-    fs = require("fs"),
-    path = require('path'),
-    favicon = require('static-favicon'),
-    logger = require('morgan'),
-    cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser'),
-    routes = require('./routes/index'),
-    users = require('./routes/users'),
-    ices = require('./routes/ices'),
-    session = require('express-session'),
-    redisClient = require('redis').createClient()
-    RedisStore = require('connect-redis')(session),
-    app = express();
+/// <reference path="typings/tsd.d.ts" />
+var express = require('express');
 
+var path = require('path');
+
+var index = require('routes/index');
+var users = require('routes/users');
+var ices = require('routes/ices');
+
+//import cookieParser = require('cookie-parser');
+//import bodyParser = require('body-parser');
+//import session = require('express-session');
+//import RedisStore = require('connect-redis')(session);
+var _app = express();
+
+//        var redisClient = redis.createClient(6379, 'localhost');
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+_app.set('views', path.join(__dirname, 'views'));
+_app.set('view engine', 'jade');
 
-app.use(favicon());
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-// TODO: hogeじゃなくする
-app.use(cookieParser("hoge"));
-app.use(session({
-    secret: "hoge",
-    store: new RedisStore({client: redisClient})
-}));
+//app.use(favicon());
+//app.use(logger('dev'));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded());
+//app.use(cookieParser());
+_app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('stylus').middleware({ src: path.join(__dirname, 'public') }));
+//// TODO: hogeじゃなくする
+//app.use(cookieParser("hoge"));
+//app.use(session({
+//    secret: "hoge",
+//    store: new RedisStore({client: redisClient})
+//}));
+_app.use(require('stylus').middleware({ src: path.join(__dirname, 'public') }));
 
-app.use('/', routes);
-app.use('/users', users);
-app.use('/ices', ices);
+_app.use('/', index.Config.router);
+_app.use('/users', users.Config.router);
+_app.use('/ices', ices.Config.router);
 
-// TODO: デバッグ時のみにする
+//
+//// TODO: デバッグ時のみにする
 /// catch 404 and forwarding to error handler
-app.use(function(req, res, next) {
+_app.use(function (req, res, next) {
     var err = new Error('Not Found');
-    err.status = 404;
+
+    //    err.status = 404;
     next(err);
 });
 
-app.redisClient = redisClient;
-
-module.exports = app;
+var MyApp = (function () {
+    function MyApp() {
+    }
+    Object.defineProperty(MyApp.prototype, "app", {
+        get: function () {
+            return _app;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return MyApp;
+})();
+module.exports = MyApp;
+//# sourceMappingURL=app.js.map
