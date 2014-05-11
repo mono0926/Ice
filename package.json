@@ -36,7 +36,8 @@
         "express-session": "",
         "underscore": "",
         "winston": "",
-        "json": ""
+        "json": "",
+        "url": ""
     },
     "engines": {
         "node": "0.11.x"

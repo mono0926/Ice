@@ -12,16 +12,33 @@ var ices = require('./routes/ices');
 //import session = require('express-session');
 //import RedisStore = require('connect-redis')(session);
 (function (MyApp) {
-    var rediOps;
+    var rediOps = { parser: "javascript", no_ready_check: false };
+    var client = null;
+
+    if (process.env.ENV === "debug") {
+        console.log("debug");
+
+        client = redis.createClient(6379, "localhost", rediOps);
+    } else {
+        console.log("production");
+
+        client = redis.createClient(9242, "angelfish.redistogo.com", rediOps);
+        console.log("hogehoge");
+        client.auth("a77d8bad8279ef1fa18f15cb209bf43d", function (err, res) {
+            console.log("connected");
+            console.log(err);
+            console.log("connected");
+        });
+    }
 
     MyApp.app = express();
-    MyApp.redisClient = redis.createClient(6379, "localhost", rediOps);
+    MyApp.redisClient = client;
 })(exports.MyApp || (exports.MyApp = {}));
 var MyApp = exports.MyApp;
 
 var app = MyApp.app, redisClient = MyApp.redisClient;
 
-var values = ["hoge", "fuga"];
+var values = ["hoge", process.env.ENV];
 redisClient.set(values, function (err, res) {
     console.log(err);
     console.log(res);

@@ -13,16 +13,34 @@ import ices = require('./routes/ices');
 
 
 export module MyApp {
-    var rediOps : redis.ClientOpts;
+    var rediOps : redis.ClientOpts = {parser: "javascript", no_ready_check : false};
+    var client = null;
+
+    if (process.env.ENV === "debug") {
+        console.log("debug");
+
+        client = redis.createClient(6379, "localhost", rediOps);
+    } else {
+        console.log("production");
+
+        client = redis.createClient(9242, "angelfish.redistogo.com", rediOps);
+        console.log("hogehoge");
+        client.auth("a77d8bad8279ef1fa18f15cb209bf43d", (err, res) =>
+        {
+            console.log("connected");
+            console.log(err);
+            console.log("connected");
+        });
+    }
 
     export var app = express();
-    export var redisClient = redis.createClient(6379, "localhost", rediOps);
+    export var redisClient = client;
 }
 
 var app = MyApp.app,
     redisClient = MyApp.redisClient;
 
-var values = ["hoge", "fuga"];
+var values = ["hoge", process.env.ENV];
 redisClient.set(values, (err, res) =>
 {
     console.log(err);
