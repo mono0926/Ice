@@ -1,5 +1,5 @@
 /// <reference path="../typings/tsd.d.ts" />
-import app = require('../app');
+import app = require('../my-app');
 import express = require('express');
 
 export module Config {

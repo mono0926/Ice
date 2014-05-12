@@ -2,44 +2,26 @@
 var express = require('express');
 
 var path = require('path');
-var redis = require('redis');
+
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var ices = require('./routes/ices');
+var db_manager = require('./model/db-manager');
 
 //import cookieParser = require('cookie-parser');
 //import session = require('express-session');
 //import RedisStore = require('connect-redis')(session);
-(function (MyApp) {
-    var rediOps = { parser: "javascript", no_ready_check: false };
-    var client = null;
+(function (myapp) {
+    myapp.app = express();
+    myapp.dbManager = db_manager.db_manager.manager;
+})(exports.myapp || (exports.myapp = {}));
+var myapp = exports.myapp;
 
-    if (process.env.ENV === "debug") {
-        console.log("debug");
-
-        client = redis.createClient(6379, "localhost", rediOps);
-    } else {
-        console.log("production");
-
-        client = redis.createClient(9242, "angelfish.redistogo.com", rediOps);
-        console.log("hogehoge");
-        client.auth("a77d8bad8279ef1fa18f15cb209bf43d", function (err, res) {
-            console.log("connected");
-            console.log(err);
-            console.log("connected");
-        });
-    }
-
-    MyApp.app = express();
-    MyApp.redisClient = client;
-})(exports.MyApp || (exports.MyApp = {}));
-var MyApp = exports.MyApp;
-
-var app = MyApp.app, redisClient = MyApp.redisClient;
+var app = myapp.app, dbManager = myapp.dbManager;
 
 var values = ["hoge", process.env.ENV];
-redisClient.set(values, function (err, res) {
+dbManager.set(values, function (err, res) {
     console.log(err);
     console.log(res);
 });
@@ -80,4 +62,4 @@ function setupRoutes() {
     app.use('/users', users.Config.router);
     app.use('/ices', ices.Config.router);
 }
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=my-app.js.map
