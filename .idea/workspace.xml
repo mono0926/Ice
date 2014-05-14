@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eecf456d-89c7-4d45-a6c4-112372b2dfe0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/db-manager.js.map" afterPath="$PROJECT_DIR$/model/db-manager.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/db-manager.js" afterPath="$PROJECT_DIR$/model/db-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/db-manager.ts" afterPath="$PROJECT_DIR$/model/db-manager.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/angular.jade" afterPath="$PROJECT_DIR$/views/angular.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IceMe.iws" />
@@ -30,11 +28,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="db-manager.ts" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="db-manager.ts" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/model/db-manager.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.61340207" vertical-offset="0" max-vertical-offset="935">
-                  <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+                <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="935">
+                  <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -43,8 +41,8 @@
           <file leaf-file-name="db-manager.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/model/db-manager.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="867">
-                  <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="884">
+                  <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -60,11 +58,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="angular.jade" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="angular.jade" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/angular.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1564">
-                  <caret line="28" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="27" />
+                <state vertical-scroll-proportion="0.31113955" vertical-offset="505" max-vertical-offset="1564">
+                  <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -137,7 +135,7 @@
           <file leaf-file-name="angular.ts" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/javascripts/angular.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.7167487" vertical-offset="0" max-vertical-offset="2244">
+                <state vertical-scroll-proportion="1.3108935" vertical-offset="323" max-vertical-offset="2244">
                   <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
                   <folding />
                 </state>
@@ -199,7 +197,6 @@
         <option value="$PROJECT_DIR$/typings/tsd.d.ts" />
         <option value="$PROJECT_DIR$/views/root.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/angular.styl" />
-        <option value="$PROJECT_DIR$/views/angular.jade" />
         <option value="$PROJECT_DIR$/public/html/root.html" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/my-app.ts" />
@@ -208,6 +205,7 @@
         <option value="$PROJECT_DIR$/views/users.jade" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/model/db-manager.ts" />
+        <option value="$PROJECT_DIR$/views/angular.jade" />
       </list>
     </option>
   </component>
@@ -529,13 +527,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279321" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279321" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.118535735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33975348" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33179012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33179012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -881,17 +879,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/angular.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="28" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/angular.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7167487" vertical-offset="0" max-vertical-offset="2244">
+        <state vertical-scroll-proportion="1.3108935" vertical-offset="323" max-vertical-offset="2244">
           <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
           <folding />
         </state>
@@ -915,8 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/db-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="867">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="884">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -947,8 +937,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/db-manager.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61340207" vertical-offset="0" max-vertical-offset="935">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="935">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/angular.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31113955" vertical-offset="505" max-vertical-offset="1564">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
           <folding />
         </state>
       </provider>
