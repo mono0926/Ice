@@ -17,9 +17,9 @@ export module db_manager {
             if (env.ENV === "debug") {
                 this.client = redis.createClient(6379, "localhost", null);
             } else {
-                winston.info("production");
+                var rtg   = require("url").parse(process.env.REDISTOGO_URL);
                 var rediOps : redis.ClientOpts = {parser: "javascript", no_ready_check : false};
-                this.client = redis.createClient(env.REDIS_PORT, env.REDIS_URL, rediOps);
+                this.client = redis.createClient(rtg.port, rtg.hostname, rediOps);
                 this.client.auth(env.REDIS_PASSWORD, (err, res) =>
                 {
                     winston.info(res);
