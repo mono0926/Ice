@@ -7,6 +7,7 @@ import bodyParser = require('body-parser');
 import index = require('./routes/index');
 import users = require('./routes/users');
 import ices = require('./routes/ices');
+import angular = require('./routes/angular');
 import db_manager = require('./model/db-manager');
 //import cookieParser = require('cookie-parser');
 //import session = require('express-session');
@@ -55,6 +56,7 @@ function setupRoutes() {
     app.use('/', index.Config.router);
     app.use('/users', users.Config.router);
     app.use('/ices', ices.Config.router);
+    app.use('/angular', angular.Config.router);
 //// TODO: デバッグ時のみにする
     app.use((req, res, next) => {
         var err = new Error('Not Found');

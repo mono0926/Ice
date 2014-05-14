@@ -10,9 +10,9 @@ var _ : UnderscoreStatic = require('underscore');
 
 /* GET home page. */
 router.get('/', (req, res) => {
-//    res.render('index', { title: 'ice.me' });
+    res.render('index', { title: 'ice.me' });
     app.myapp.dbManager.get("hoge", (err, redisRes) =>
     {
-       res.render('index', { title: redisRes});
+//       res.render('index', { title: redisRes});
     });
 });

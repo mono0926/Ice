@@ -11,9 +11,9 @@ var _ = require('underscore');
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    //    res.render('index', { title: 'ice.me' });
+    res.render('index', { title: 'ice.me' });
     app.myapp.dbManager.get("hoge", function (err, redisRes) {
-        res.render('index', { title: redisRes });
+        //       res.render('index', { title: redisRes});
     });
 });
 //# sourceMappingURL=index.js.map

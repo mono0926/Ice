@@ -2,9 +2,21 @@ extends layout
 
 block content
     h1= title
+    a(href="angular") Angular
     p Comming soon...
     img(src="images/mate.png")
-
     ul#ices
     - for (i = 0; i < 10; i++)
         li: a(href="ices/#{i}") アイス#{i}
+    #main()
+        h1 Other
+        .in
+            span Your name:
+            input(ng-model="name")
+            button(ng-click="clear()") Clear
+        .out
+            p {{message()}}
+            br
+            button(ng-click="shout()") Shout it!
+        ul.list
+            li(ng-repeat="item in items",ng-click="$parent.") {{item.name}}

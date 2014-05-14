@@ -3,21 +3,24 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/routes/users.js" />
-        <item url="file://$PROJECT_DIR$/app.js" />
         <item url="file://$PROJECT_DIR$/routes/index.js" />
+        <item url="file://$PROJECT_DIR$/public/javascripts/angular.js" />
         <item url="file://$PROJECT_DIR$/model/db-manager.js" />
         <item url="file://$PROJECT_DIR$/my-app.js" />
+        <item url="file://$PROJECT_DIR$/routes/angular.js" />
         <item url="file://$PROJECT_DIR$/bin/www2.js" />
         <item url="file://$PROJECT_DIR$/routes/ices.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/app.js" />
+      <root url="file://$PROJECT_DIR$/app.js" />
       <root url="file://$PROJECT_DIR$/routes/users.js" />
       <root url="file://$PROJECT_DIR$/routes/index.js" />
-      <root url="file://$PROJECT_DIR$/app.js" />
+      <root url="file://$PROJECT_DIR$/public/javascripts/angular.js" />
       <root url="file://$PROJECT_DIR$/model/db-manager.js" />
       <root url="file://$PROJECT_DIR$/my-app.js" />
+      <root url="file://$PROJECT_DIR$/routes/angular.js" />
       <root url="file://$PROJECT_DIR$/routes/ices.js" />
       <root url="file://$PROJECT_DIR$/bin/www2.js" />
     </CLASSES>

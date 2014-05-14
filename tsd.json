@@ -19,6 +19,12 @@
     },
     "winston/winston.d.ts": {
       "commit": "a23785ab1b400bfb2e2720f2b10002134b5e3608"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "9371c65e5a288612195b4dac93dd9b57dc41911a"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "9371c65e5a288612195b4dac93dd9b57dc41911a"
     }
   }
 }

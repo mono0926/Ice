@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var ices = require('./routes/ices');
+var angular = require('./routes/angular');
 var db_manager = require('./model/db-manager');
 
 //import cookieParser = require('cookie-parser');
@@ -52,6 +53,7 @@ function setupRoutes() {
     app.use('/', index.Config.router);
     app.use('/users', users.Config.router);
     app.use('/ices', ices.Config.router);
+    app.use('/angular', angular.Config.router);
 
     //// TODO: デバッグ時のみにする
     app.use(function (req, res, next) {

@@ -1,0 +1,87 @@
+extends layout
+block content
+    script(src="javascripts/angular.js")
+    link(rel='stylesheet', href='/stylesheets/angular.css')
+    h1 AngularJS and Jade and Styles Exmples
+    div(ng-controller="HelloWorldController")
+        h2 文字列を表示する
+        p {{message}}
+    div(ng-controller="SampleController")
+        h2 ２つの記法の使い分け
+        p {{simple}}
+        p(ng-bind="directive")
+    div(ng-controller="SampleController2")
+        h2 フォームへの入力
+        input(type="text" ng-model="text")
+        input(type="checkbox" ng-model="checkbox")
+        input(type="radio" name="hoge" value="HOGE" ng-model="radio")
+        input(type="radio" name="hoge" value="FUGA" ng-model="radio")
+        select(ng-model="select")
+            option(value="foo") Foo
+            option(value="bar") Bar
+    div(ng-controller="SampleController3")
+        h2 イベントハンドリング
+        button(ng-click="click()") Button
+        p {{message}}
+    div(ng-controller="SampleController4")
+        h2 繰り返し処理
+        ul
+            li(ng-repeat="item in items") {{$index}} {{item.key}} : {{item.value}}
+    div(ng-controller="SampleController5")
+        h2 表紙・非表示を切り替える
+        button(ng-click="click()") Button
+        p(ng-show="hidden") Visible
+    div(ng-controller="SampleController6")
+        h2 CSSのクラスを指定する
+        ul
+            li(ng-class="hoge") hoge
+            li(ng-class="['blue', 'solid-border']") fuga
+            li(ng-class="{'red': isRed, 'dotted-border': isDotted}") piyo
+    div(ng-controller="SampleController7")
+        h2 src 属性と href 属性にデータバインディングをする
+        img(ng-src="images/{{imageFileName}}")
+        br
+        a(ng-href="{{url}}") monoHub
+    div(ng-controller="SampleController9")
+        h2 モデルの変更をビューに反映する
+        p {{message}}
+        button(ng-click="change()") change!!
+    div(ng-controller="SampleController9")
+        h2 $watch 関数で変更を監視する
+        p hoge:
+        input(type="number" ng-model="hoge")
+        br
+        p fuga:
+        input(type="number" ng-model="fuga")
+        br
+        p 合計: {{sum}}
+    div(ng-controller="SampleController10")
+        h2 モジュールを定義する
+        h3 {{message}}
+    div(ng-controller="SampleController11")
+        h2 依存するインスタンス（サービス）をインジェクションする
+        h3 {{message}}
+    div(ng-controller="SampleController12")
+        h2 フィルターで表示形式を指定する
+        //h3 {{money | currency: "¥"}}
+    div(ng-controller="SampleController13")
+        pre {{array1 | filter:"g" | json}}
+        pre {{array2 | filter:"h" | json}}
+    div(ng-controller="SampleController14")
+        h2 expression にオブジェクトを渡す
+        ul
+            li(ng-repeat="physicist in physicists | filter:{firstName:'e', lastName:'l'}") {{physicist.firstName}} {{physicist.lastName}}
+    div(ng-controller="SampleController15")
+        h2 expression に関数を渡す
+        p {{[1,2,3,4,5] | filter:isEvenNumber}}
+    div(ng-controller="SampleController16")
+        h2 comparator で一致条件を定義する
+        p {{["a", "A", "ab", "c"] | filter:"a":true}}
+        p {{["a", "A", "ab", "c"] | filter:"a":false}}
+        p {{["a", "A", "ab", "c"] | filter:"a":contains}}
+    div
+        h2 フィルターを自作する
+        p {{"hoge" | myFilter:"<":">"}}
+    div
+        h2 ngRouteモジュールを追加する
+        div.border(ng-view)
