@@ -20,8 +20,7 @@ var myapp = exports.myapp;
 
 var app = myapp.app, dbManager = myapp.dbManager;
 
-var values = ["hoge", process.env.ENV];
-dbManager.set(values, function (err, res) {
+dbManager.set("hoge", process.env.ENV, function (err, res) {
     console.log(err);
     console.log(res);
 });
@@ -43,14 +42,6 @@ app.use(bodyParser.urlencoded());
 
 setupRoutes();
 
-//// TODO: デバッグ時のみにする
-app.use(function (req, res, next) {
-    var err = new Error('Not Found');
-
-    //    err.status = 404;
-    next(err);
-});
-
 function setupViewEngine() {
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'jade');
@@ -61,5 +52,13 @@ function setupRoutes() {
     app.use('/', index.Config.router);
     app.use('/users', users.Config.router);
     app.use('/ices', ices.Config.router);
+
+    //// TODO: デバッグ時のみにする
+    app.use(function (req, res, next) {
+        var err = new Error('Not Found');
+
+        //    err.status = 404;
+        next(err);
+    });
 }
 //# sourceMappingURL=my-app.js.map
