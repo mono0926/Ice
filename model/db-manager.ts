@@ -13,11 +13,13 @@ export module db_manager {
         private client : redis.RedisClient;
         constructor() {
             var env = process.env;
+            winston.info('env: ' + env);
             winston.info('ENV: ' + env.ENV);
             if (env.ENV === "debug") {
                 this.client = redis.createClient(6379, "localhost", null);
             } else {
-                var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+                winston.info('REDISTOGO_URL: ' + env.REDISTOGO_URL);
+                var rtg   = require("url").parse(env.REDISTOGO_URL);
                 var rediOps : redis.ClientOpts = {parser: "javascript", no_ready_check : false};
                 this.client = redis.createClient(rtg.port, rtg.hostname, rediOps);
                 this.client.auth(env.REDIS_PASSWORD, (err, res) =>
