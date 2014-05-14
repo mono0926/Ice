@@ -17,7 +17,9 @@ var redis = require('redis');
                 this.client = redis.createClient(rtg.port, rtg.hostname, rediOps);
                 this.client.auth(env.REDIS_PASSWORD, function (err, res) {
                     winston.info(res);
-                    winston.info(err.toString());
+                    if (err) {
+                        winston.info(err.toString());
+                    }
                 });
             }
         }

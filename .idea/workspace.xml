@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eecf456d-89c7-4d45-a6c4-112372b2dfe0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/db-manager.js.map" afterPath="$PROJECT_DIR$/model/db-manager.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/db-manager.js" afterPath="$PROJECT_DIR$/model/db-manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/db-manager.ts" afterPath="$PROJECT_DIR$/model/db-manager.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IceMe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +33,8 @@
           <file leaf-file-name="db-manager.ts" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/model/db-manager.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.32860824" vertical-offset="0" max-vertical-offset="901">
-                  <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+                <state vertical-scroll-proportion="0.61340207" vertical-offset="0" max-vertical-offset="935">
+                  <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
@@ -43,8 +43,8 @@
           <file leaf-file-name="db-manager.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/model/db-manager.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="850">
-                  <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="867">
+                  <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -915,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/db-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="850">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="867">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -947,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/db-manager.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32860824" vertical-offset="0" max-vertical-offset="901">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.61340207" vertical-offset="0" max-vertical-offset="935">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
           <folding />
         </state>
       </provider>

@@ -25,7 +25,9 @@ export module db_manager {
                 this.client.auth(env.REDIS_PASSWORD, (err, res) =>
                 {
                     winston.info(res);
-                    winston.info(err.toString());
+                    if (err) {
+                        winston.info(err.toString());
+                    }
                 });
             }
         }
