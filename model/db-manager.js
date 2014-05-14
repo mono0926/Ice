@@ -6,7 +6,7 @@ var redis = require('redis');
     var RedigMnager = (function () {
         function RedigMnager() {
             var env = process.env;
-            winston.info(env.ENV);
+            winston.info('ENV: ' + env.ENV);
             if (env.ENV === "debug") {
                 this.client = redis.createClient(6379, "localhost", null);
             } else {

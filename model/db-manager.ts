@@ -13,7 +13,7 @@ export module db_manager {
         private client : redis.RedisClient;
         constructor() {
             var env = process.env;
-            winston.info(env.ENV);
+            winston.info('ENV: ' + env.ENV);
             if (env.ENV === "debug") {
                 this.client = redis.createClient(6379, "localhost", null);
             } else {
