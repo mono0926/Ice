@@ -26,8 +26,6 @@ dbManager.set("hoge", process.env.ENV, function (err, res) {
     console.log(res);
 });
 
-setupViewEngine();
-
 //app.use(favicon());
 //app.use(logger('dev'));
 //app.use(cookieParser());
@@ -37,7 +35,7 @@ setupViewEngine();
 //    secret: "hoge",
 //    store: new RedisStore({client: redisClient})
 //}));
-app.use(express.static(path.join(__dirname, 'public')));
+setupViewEngine();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
@@ -50,16 +48,16 @@ function setupViewEngine() {
 }
 
 function setupRoutes() {
+    app.use(express.static(path.join(__dirname, 'public')));
+    app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
     app.use('/', index.Config.router);
     app.use('/users', users.Config.router);
     app.use('/ices', ices.Config.router);
     app.use('/angular', angular.Config.router);
 
-    //// TODO: デバッグ時のみにする
+    // TODO: デバッグ時のみにする
     app.use(function (req, res, next) {
         var err = new Error('Not Found');
-
-        //    err.status = 404;
         next(err);
     });
 }

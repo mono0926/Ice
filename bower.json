@@ -1,0 +1,12 @@
+{
+  "name": "icelog",
+  "version": "0.0.0",
+  "authors": [
+    "Masayuki Ono <mono0926@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-route": "~1.2.16",
+    "angular": "~1.2.16"
+  }
+}
