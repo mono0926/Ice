@@ -25,6 +25,9 @@
     },
     "jquery/jquery.d.ts": {
       "commit": "9371c65e5a288612195b4dac93dd9b57dc41911a"
+    },
+    "angularjs/angular-mocks.d.ts": {
+      "commit": "bb59fade926c39c73f0c23781a7db60d51fbcff3"
     }
   }
 }
