@@ -46,29 +46,12 @@ function setupRoutes() {
     exports.app.use(express.static(path.join(__dirname, 'public')));
     exports.app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
 
-    var router = new express.Router();
-    index.prepare(router);
-    exports.app.use('/', router);
-
-    router = new express.Router();
-    users.prepare(router);
-    exports.app.use('/users', router);
-
-    router = new express.Router();
-    ices.prepare(router);
-    exports.app.use('/ices', router);
-
-    router = new express.Router();
-    angular.prepare(router);
-    exports.app.use('/angular', router);
-
-    router = new express.Router();
-    todos.prepare(router);
-    exports.app.use('/todos', router);
-
-    router = new express.Router();
-    todos.prepareAPI(router);
-    exports.app.use('/api', router);
+    index.prepare('/');
+    users.prepare('/users');
+    ices.prepare('/ices');
+    angular.prepare('/angular');
+    todos.prepare('/todos');
+    todos.prepareAPI('/api');
 
     // TODO: デバッグ時のみにする
     exports.app.use(function (req, res, next) {

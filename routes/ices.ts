@@ -1,7 +1,10 @@
 /// <reference path="../typings/tsd.d.ts" />
 import express = require('express');
+import app = require('../my-app');
 
-export function prepare(router: express.Router) {
+export function prepare(path: string) {
+    var router = new express.Router();
+    app.app.use(path, router);
     router.get('/:id', (req, res) => {
         console.log("hoge");
         res.send('ices' + req.params.id);

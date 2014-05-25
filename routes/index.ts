@@ -3,7 +3,9 @@ import express = require('express');
 import app = require('../my-app');
 var _ : UnderscoreStatic = require('underscore');
 
-export function prepare(router: express.Router) {
+export function prepare(path: string) {
+    var router = new express.Router();
+    app.app.use(path, router);
     /* GET home page. */
     router.get('/', (req, res) => {
         res.render('index', { title: 'ice.me' });

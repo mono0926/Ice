@@ -1,4 +1,10 @@
-function prepare(router) {
+/// <reference path="../typings/tsd.d.ts" />
+var express = require('express');
+var app = require('../my-app');
+
+function prepare(path) {
+    var router = new express.Router();
+    app.app.use(path, router);
     router.get('/:id', function (req, res) {
         console.log("hoge");
         res.send('ices' + req.params.id);

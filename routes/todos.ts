@@ -11,13 +11,17 @@ interface ITodo {
     done: boolean;
 }
 
-export function prepare(router: express.Router) {
+export function prepare(path: string) {
+    var router = new express.Router();
+    app.app.use(path, router);
     router.get('/', (req, res) => {
         res.render('todo');
     });
 }
 
-export function prepareAPI(router: express.Router) {
+export function prepareAPI(path: string) {
+    var router = new express.Router();
+    app.app.use(path, router);
     router.get("/todos", getList);
     router.post("/todos", insert);
     router.put("/todos", update);

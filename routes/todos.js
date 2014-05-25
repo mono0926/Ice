@@ -1,16 +1,21 @@
 /// <reference path="../typings/tsd.d.ts" />
 /// <reference path="../typings/sequelize/sequelize.d.ts" />
 var app = require('../my-app');
+var express = require('express');
 
 
-function prepare(router) {
+function prepare(path) {
+    var router = new express.Router();
+    app.app.use(path, router);
     router.get('/', function (req, res) {
         res.render('todo');
     });
 }
 exports.prepare = prepare;
 
-function prepareAPI(router) {
+function prepareAPI(path) {
+    var router = new express.Router();
+    app.app.use(path, router);
     router.get("/todos", getList);
     router.post("/todos", insert);
     router.put("/todos", update);
