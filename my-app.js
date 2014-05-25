@@ -8,20 +8,15 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var ices = require('./routes/ices');
 var angular = require('./routes/angular');
+var todos = require('./routes/todos');
 var db_manager = require('./model/db-manager');
 
 //import cookieParser = require('cookie-parser');
 //import session = require('express-session');
 //import RedisStore = require('connect-redis')(session);
-(function (myapp) {
-    myapp.app = express();
-    myapp.dbManager = db_manager.db_manager.manager;
-})(exports.myapp || (exports.myapp = {}));
-var myapp = exports.myapp;
+exports.app = express(), exports.dbManager = db_manager.manager;
 
-var app = myapp.app, dbManager = myapp.dbManager;
-
-dbManager.set("hoge", process.env.ENV, function (err, res) {
+exports.dbManager.set("hoge", process.env.ENV, function (err, res) {
     console.log(err);
     console.log(res);
 });
@@ -36,27 +31,47 @@ dbManager.set("hoge", process.env.ENV, function (err, res) {
 //    store: new RedisStore({client: redisClient})
 //}));
 setupViewEngine();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+exports.app.use(bodyParser.json());
+exports.app.use(bodyParser.urlencoded());
 
 setupRoutes();
 
 function setupViewEngine() {
-    app.set('views', path.join(__dirname, 'views'));
-    app.set('view engine', 'jade');
-    app.use(require('stylus').middleware({ src: path.join(__dirname, 'public') }));
+    exports.app.set('views', path.join(__dirname, 'views'));
+    exports.app.set('view engine', 'jade');
+    exports.app.use(require('stylus').middleware({ src: path.join(__dirname, 'public') }));
 }
 
 function setupRoutes() {
-    app.use(express.static(path.join(__dirname, 'public')));
-    app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
-    app.use('/', index.Config.router);
-    app.use('/users', users.Config.router);
-    app.use('/ices', ices.Config.router);
-    app.use('/angular', angular.Config.router);
+    exports.app.use(express.static(path.join(__dirname, 'public')));
+    exports.app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
+
+    var router = new express.Router();
+    index.prepare(router);
+    exports.app.use('/', router);
+
+    router = new express.Router();
+    users.prepare(router);
+    exports.app.use('/users', router);
+
+    router = new express.Router();
+    ices.prepare(router);
+    exports.app.use('/ices', router);
+
+    router = new express.Router();
+    angular.prepare(router);
+    exports.app.use('/angular', router);
+
+    router = new express.Router();
+    todos.prepare(router);
+    exports.app.use('/todos', router);
+
+    router = new express.Router();
+    todos.prepareAPI(router);
+    exports.app.use('/api', router);
 
     // TODO: デバッグ時のみにする
-    app.use(function (req, res, next) {
+    exports.app.use(function (req, res, next) {
         var err = new Error('Not Found');
         next(err);
     });

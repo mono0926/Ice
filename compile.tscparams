@@ -1,0 +1,1 @@
+--noImplicitAny --out public/javascripts/todo-app.js public/javascripts/todo-main.ts

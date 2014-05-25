@@ -164,9 +164,9 @@ declare module "express" {
 
           put(name: RegExp, ...handlers: RequestFunction[]): Router;
 
-          del(name: string, ...handlers: RequestFunction[]): Router;
+          delete(name: string, ...handlers: RequestFunction[]): Router;
 
-          del(name: RegExp, ...handlers: RequestFunction[]): Router;
+          delete(name: RegExp, ...handlers: RequestFunction[]): Router;
           
           patch(name: string, ...handlers: RequestFunction[]): Router;
  

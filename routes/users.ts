@@ -1,11 +1,7 @@
 /// <reference path="../typings/tsd.d.ts" />
-
 import express = require('express');
-export module Config {
-    export var router = new express.Router();
+export function prepare(router: express.Router) {
+    router.get('/', (req, res) => {
+        res.render('users');
+    });
 }
-var router = Config.router;
-router.get('/', (req, res) => {
-    res.render('users');
-});
-
