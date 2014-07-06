@@ -15,9 +15,10 @@ export function prepare(path: string) {
     });
 
     router.post("", (req, res) => {
+        var files = req.files
         var body = req.body;
         var task = body.task;
         console.log(task);
-        res.send('ices' + req.params.id);
+        res.send('ices' + task);
     });
 }

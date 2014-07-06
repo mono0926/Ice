@@ -1,9 +1,11 @@
 /// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/multer.d.ts" />
 var express = require('express');
 
 var path = require('path');
 
 var bodyParser = require('body-parser');
+var multer = require('multer');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var ices = require('./routes/ices');
@@ -33,6 +35,7 @@ exports.dbManager.set("hoge", process.env.ENV, function (err, res) {
 setupViewEngine();
 exports.app.use(bodyParser.json());
 exports.app.use(bodyParser.urlencoded());
+exports.app.use(multer({ dest: './uploads/' }));
 
 setupRoutes();
 

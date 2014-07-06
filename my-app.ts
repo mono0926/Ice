@@ -1,9 +1,11 @@
 /// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/multer.d.ts" />
 import express = require('express');
 import fs = require("fs");
 import path = require('path');
 import redis = require('redis');
 import bodyParser = require('body-parser');
+import multer = require('multer');
 import index = require('./routes/index');
 import users = require('./routes/users');
 import ices = require('./routes/ices');
@@ -37,6 +39,7 @@ dbManager.set("hoge", process.env.ENV, (err, res) =>
 setupViewEngine();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(multer({ dest: './uploads/'}))
 
 setupRoutes();
 

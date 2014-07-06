@@ -14,10 +14,11 @@ function prepare(path) {
     });
 
     router.post("", function (req, res) {
+        var files = req.files;
         var body = req.body;
         var task = body.task;
         console.log(task);
-        res.send('ices' + req.params.id);
+        res.send('ices' + task);
     });
 }
 exports.prepare = prepare;
